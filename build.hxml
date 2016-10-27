@@ -1,0 +1,13 @@
+-debug
+-D nodejs
+
+-lib hxnodejs:4.0.9
+-lib minject:2.0.0-rc.1
+-lib json-rpc:1.3.7
+
+-cp lib/haxe-json-rpc/src/haxe
+-cp src/haxe
+
+-main workflow.server.Server
+
+-js build/server.js

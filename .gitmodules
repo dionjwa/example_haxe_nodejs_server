@@ -1,0 +1,4 @@
+[submodule "lib/hxnodelibs"]
+	path = lib/hxnodelibs
+	url = git@github.com:dionjwa/hxnodelibs.git
+	branch = new_externs
