@@ -43,7 +43,7 @@ ENV HAXE_STD_PATH $HAXE_STD_PATH:.:/
 # Node.js
 ################################################################################
 RUN apt-get update \
-  && apt-get install -y build-essential curl tar && \
+  && apt-get install -y build-essential curl tar python && \
   apt-get -y autoremove && \
   apt-get -y clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -88,6 +88,9 @@ RUN haxelib install --always $APP/build.hxml
 ################################################################################
 # Actual app code
 ################################################################################
-ADD ./src $APP
+ADD ./src $APP/src
+ADD ./lib $APP/lib
+
+RUN haxe build.hxml
 
 CMD node build/server.js
