@@ -9,7 +9,7 @@ class ServiceA
 
 	public function new() {}
 
-	@rpc
+	@rpc({alias:'fooAThenC'})
 	public function fooAThenC(input :String) :Promise<String>
 	{
 		return Promise.promise('$input processed by A')
@@ -18,7 +18,7 @@ class ServiceA
 			});
 	}
 
-	@rpc
+	@rpc({alias:'fooAThenB'})
 	public function fooAThenB(input :String) :Promise<String>
 	{
 		return Promise.promise('$input processed by A')

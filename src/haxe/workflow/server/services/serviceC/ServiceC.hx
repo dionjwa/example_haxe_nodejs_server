@@ -2,7 +2,7 @@ package workflow.server.services.serviceC;
 
 class ServiceC
 {
-	@rpc
+	@rpc({alias:'fooC'})
 	public function fooC(input :String) :Promise<String>
 	{
 		return Promise.promise('$input processed by C');

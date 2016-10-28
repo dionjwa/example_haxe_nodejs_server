@@ -177,7 +177,7 @@ class Server
 							return serviceA.fooAThenC(inputValue)
 								.then(function(resultC) {
 									trace('resultC=${resultC}');
-									Node.process.exit(0);
+									// Node.process.exit(0);
 								});
 						});
 				}
